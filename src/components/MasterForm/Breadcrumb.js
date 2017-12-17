@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 import up from '../../imgs/up.png'
 
 const Breadcrumb = () => (

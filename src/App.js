@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './sass/bundle.sass';
 import Header from '../src/components/MasterForm/Header'
 import MenuLeft from '../src/components/MasterForm/MenuLeft'

@@ -31,10 +31,10 @@ class InputForm extends Component{
 	}
 
 	isValid() {
-	    const { errorsInput, isValidInput } = validateInput(this.state);
+	    const { errorsInput,isValidInput } = validateInput(this.state);
 
 	    if (!isValidInput) {
-	      this.setState({ errors: {validateInput:"This field is required"}, isLoading: true })
+	      this.setState({ errors: errorsInput, isLoading: true })
 	    }
 	    
 	    return isValidInput;
@@ -64,7 +64,7 @@ class InputForm extends Component{
 
 		return(
 			<form className="input_form__wrapper" onSubmit={this.onSubmit}>
-				<div className={classnames('field_form__input_form', { 'has-error': errors.validateInput })}>
+				<div className={classnames('field_form__input_form', { 'has-error': errors.firstname })}>
 					<h3>First Name</h3>
 					<input type="text" 
 						name="firstname"
@@ -72,10 +72,10 @@ class InputForm extends Component{
 						onChange={this.onChange}
 					/>
 					<span className="validation">Input your first name.</span>
-					{errors.validateInput && <span className="error">Required</span>}
-					{errors.validateInput && <span className="notify">Please refresh page to typing again!</span>}
+					{errors.firstname && <span className="error">Required</span>}
+					{errors.firstname && <span className="notify">Please refresh page to typing again!</span>}
 				</div>
-				<div className={classnames('field_form__input_form', { 'has-error': errors.validateInput })}>
+				<div className={classnames('field_form__input_form', { 'has-error': errors.lastname })}>
 					<h3>Last Name</h3>
 					<input type="text" 
 						name="lastname"
@@ -83,8 +83,8 @@ class InputForm extends Component{
 						onChange={this.onChange}
 					/>
 					<span className="validation">Input your last name.</span>
-					{errors.validateInput && <span className="error">Required</span>}
-					{errors.validateInput && <span className="notify">Please refresh page to typing again!</span>}
+					{errors.lastname && <span className="error">Required</span>}
+					{errors.lastname && <span className="notify">Please refresh page to typing again!</span>}
 				</div>
 				<div className="field_form__input_form">
 					<h3>Where do you live?</h3>

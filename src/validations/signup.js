@@ -1,13 +1,12 @@
-import Validator from 'validator';
 import isEmpty from 'lodash/isEmpty';
 
 export default function validateInput(data) {
   let errorsInput = {};
 
-  if (data.firstname = "") {
+  if (data.firstname === "") {
     errorsInput.firstname = 'This field is required';
   }
-  if (data.lastname == "") {
+  if (data.lastname === "") {
     errorsInput.lastname = 'This field is required';
   }
 
