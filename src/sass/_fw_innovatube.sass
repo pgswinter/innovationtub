@@ -1,0 +1,273 @@
+@import functions
++exports("fw_innovatube")
+	.wrapper
+		width: 640px
+		margin: 0 auto
+		.header__wrapper
+			position: relative
+			a
+				&.logo__header
+					display: block
+					@extend .fw_padding_top_md
+					@extend .fw_padding_bottom_md
+					background-color: map-get($fw-color-blue,1)
+					img
+						display: block
+						margin: 0 auto
+			.message__header
+				background-color: map-get($fw-color-hot,1)
+				@extend .fw_padding_left_md
+				color: #fff
+				font-size: 2em
+				@extends .fw_transition_effect_0th
+				height: 0
+				span
+					@extend .fw_margin_left_md
+				&.active
+					@extend .fw_padding_top_sm
+					@extend .fw_padding_bottom_sm
+					height: auto
+			.intro__header
+				@extend .fw_padding_md_all
+				@extend .fw_padding_bottom_lg
+				@extend .fw_padding_top_lg
+				background-color: #fff
+				border-bottom: 2px solid map-get($fw-color-art,1)
+				text-align: center
+				font-size: 1em
+				h1
+					color: map-get($fw-color-dark,1)
+					margin-top: 0
+				h3
+					color: map-get($fw-color-blue,2)
+					font-size: 1.3em
+		.stick_btn
+			position: absolute
+		.input_form__wrapper
+			.field_form__input_form
+				position: relative
+				@extend .fw_padding_md_all
+				background-color: #fff
+				border-bottom: 2px solid map-get($fw-color-art,1)
+				h3
+					letter-spacing: 3px
+				&.has-error
+					input[type="text"]
+						border: 2px solid red
+				.error
+					@extend .fw_padding_xs_all
+					@extend .fw_roud_xxs
+					width: 100px
+					position: absolute
+					right: 30px
+					top: 40px
+					background-color: map-get($fw-color-hot,1)
+					letter-spacing: 3px
+					text-align: center
+					color: #fff
+				.notify
+					color: map-get($fw-color-dark,8)
+					@extend .fw_margin_top_md
+					letter-spacing: 3px
+					font-size: 2em
+				.validation
+					@extend .fw_padding_md_all
+					background-color: map-get($fw-color-blue,1)
+					color: #fff
+					letter-spacing: 2px
+					font-size: 2em
+					display: block
+					width: 100%
+					@extend .fw_roud_xxs
+					@extend .fw_margin_top_sm
+					&.art-cl
+						background-color: map-get($fw-color-art,1)
+						color: map-get($fw-color-dark,1)
+				input[type="text"],
+				textarea
+					@extend .fw_padding_sm_all
+					border: 2px solid map-get($fw-color-dark,8)
+					@extend .fw_roud_xxs
+					width: 100%
+					font-size: 2.5em
+					letter-spacing: 5px
+					&:active,
+					&:focus,
+					&:visited
+						border: 2px solid map-get($fw-color-cold,1)
+				textarea
+					height: 200px
+				.checkbox_wrapper
+					@extend .fw_clear_float_parent
+					&.list
+						.checkbox__field_form
+							@extend .fw_margin_bottom_sm
+							label
+								text-indent: 0
+								color: map-get($fw-color-dark,7)
+								position: relative
+								min-height: 123px
+								width: 100%
+								display: block
+								&:before
+									position: absolute
+									@extend .fw_center_vertical_0th
+									border-radius: 0
+								span
+									display: block
+									right: 50px
+									@extend .fw_god_center
+									width: 80%
+							input[type="radio"] + .radio-custom-label:before
+								content: ''
+								display: block
+								border: 2px solid map-get($fw-color-dark,8)
+								width: 36px
+								height: 36px
+								border-radius: 0
+							i
+								display: none
+							&.active
+								i
+									display: block
+									@extend .fw_center_vertical_0th
+									font-size: 0.7em
+									left: 1.1em
+					.checkbox__field_form
+						@extend .fw_roud_xxs
+						overflow: hidden
+						color: #fff
+						font-weight: normal
+						border: 2px solid map-get($fw-color-dark,8)
+						@extend .fw_clear_padding
+						&.s-w
+							width: 48%
+						&.first
+							margin-right: 4%
+						label
+							font-size: 2em
+							letter-spacing: 2px
+							font-weight: normal
+							text-indent: 2em
+							margin-bottom: 0
+						input[type="radio"]
+							opacity: 0
+							position: absolute
+						input[type="radio"],
+						.radio-custom-label
+							display: inline-block
+							vertical-align: middle
+							@extend .fw_padding_sm_all
+							cursor: pointer
+						.radio-custom-label
+							position: relative
+							color: map-get($fw-color-dark,8)
+						input[type="radio"] + .radio-custom-label:before
+							border-radius: 50%
+							content: ''
+							background: #fff
+							border: 2px solid map-get($fw-color-dark,8)
+							display: inline-block
+							vertical-align: middle
+							width: 20px
+							height: 20px
+							padding: 2px
+							margin-right: 10px
+							text-align: center
+						input[type="radio"]:checked + .radio-custom-label
+							background-color: map-get($fw-color-blue,1)
+							width: 100%
+							height: 100%
+							span
+								color: #fff
+							i
+								display: block
+								color: #fff
+								position: absolute
+								@extend .fw_center_vertical_0th
+								font-size: 0.7em
+								left: 23px
+						input[type="radio"]:checked + .radio-custom-label:before
+							background-color: map-get($fw-color-blue,1)
+							box-shadow: inset 0px 0px 0px 4px #fff
+						input[type="radio"]:focus + .radio-custom-label:before
+							outline: 1px solid #ddd
+						&.active
+							background-color: map-get($fw-color-blue,1)
+							border: 2px solid map-get($fw-color-dark,1)
+							.radio-custom-label
+								color: #fff
+							input[type="radio"] + .radio-custom-label:before
+								border: 2px solid map-get($fw-color-blue,1)
+				.fw_custom_select__field_form
+					position: relative
+					img
+						position: absolute
+						display: block
+						right: 25px
+						top: 25px
+					select
+						border: 2px solid map-get($fw-color-dark,8)
+						width: 100%
+						@extend .fw_margin_top_sm
+						@extend .fw_roud_xxs
+						@extend .fw_padding_sm_all
+						background-color: #fff
+						font-size: 2.5em
+						color: map-get($fw-color-dark,8)
+						letter-spacing: 5px
+						-webkit-appearance: none
+						-moz-appearance: none
+						&::-ms-expand
+							display: none
+						option
+							color: map-get($fw-color-dark,7)
+			.classic_btn
+				display: block
+				width: 100%
+				font-size: 2em
+		.breadcrumb
+			@extend .fw_padding_md_all
+			background-color: #fff
+			@extend .fw_margin_top_lg
+			a
+				color: map-get($fw-color-dark,7)
+				text-decoration: none
+				font-size: 1.5em
+				letter-spacing: 3px
+				&.pre
+					color: map-get($fw-color-blue,2)
+		.up_to_top
+			display: block
+			width: 100%
+			@extend .fw_padding_md_all
+			background-color: map-get($fw-color-blue,1)
+			text-align: center
+		.footer
+			background-color: map-get($fw-color-dark,7)
+			.logo__header
+				@extend .fw_padding_lx_all
+				text-align: center
+				display: block
+			.wrapper_item
+				@extend .fw_clear_float_parent
+				.item
+					@extend .fw_padding_sm_all
+					letter-spacing: 3px
+					h3
+						color: map-get($fw-color-blue,2)
+						text-align: center
+						font-size: 2em
+					p
+						@extend .fw_padding_sm_all
+						color: #fff
+						font-size: 1.3em
+			.copyright
+				@extend .fw_padding_sm_all
+				background-color: map-get($fw-color-art,1)
+				text-align: center
+				font-size: 1em
+				letter-spacing: 3px
+				p
+					margin-bottom: 0
+			

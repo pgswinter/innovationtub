@@ -1,0 +1,68 @@
+@import fw_responsive_device
+@import fw_map_get
+@import fw_align_common
++exports("fw_innovatube_resposive")
+	@media #{$fw-max-1920}
+	@media #{$fw-max-1920-landscape}
+	@media #{$fw-max-1920-portrait}
+	@media #{$fw-min-1024}
+	@media #{$fw-max-1024}
+		.wrapper
+			width: 100%
+			.header__wrapper
+				.message__header
+					font-size: 1em
+			.input_form__wrapper
+				.field_form__input_form
+					.validation
+						font-size: 1em
+					.checkbox_wrapper
+						.checkbox__field_form
+							&.s-w
+								width: 100%
+								&:first-child
+									margin-bottom: 20px
+					input[type="text"],
+					textarea
+						font-size: 1.5em
+					.checkbox_wrapper
+						&.list
+							.checkbox__field_form
+								label
+									&:before
+									span
+										left: 60%
+								input[type="radio"] + .radio-custom-label:before
+								i
+								&.active
+									i
+										font-size: 1em
+										left: 0.8em
+						.checkbox__field_form
+							&.s-w
+								width: 100%
+								&:first-child
+									margin-bottom: 20px
+							&.first
+							label
+								font-size: 1em
+							input[type="radio"]
+							input[type="radio"],
+							.radio-custom-label
+							.radio-custom-label
+							input[type="radio"] + .radio-custom-label:before
+							input[type="radio"]:checked + .radio-custom-label:before
+							input[type="radio"]:focus + .radio-custom-label:before
+							&.active
+								.radio-custom-label
+								input[type="radio"] + .radio-custom-label:before
+				.classic_btn
+					font-size: 1em	
+	@media #{$fw-max-1024-landscape}
+	@media #{$fw-max-1024-portrait}
+	@media #{$fw-max-768}
+	@media #{$fw-max-768-landscape}
+	@media #{$fw-max-768-portrait}
+	@media #{$fw-max-568}
+	@media #{$fw-max-568-landscape}
+	@media #{$fw-max-568-portrait}
