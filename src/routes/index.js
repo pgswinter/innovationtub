@@ -1,11 +1,14 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import {BrowserRouter, Route } from 'react-router-dom';
 
-import App from '../App';
 import InputPage from '../containers/InputPageContainer';
 
-export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={InputPage} />
-  </Route>
+const baseUrl = process.env.PUBLIC_URL; 
+
+export default () => (
+	<BrowserRouter>
+		<div>
+			<Route path={baseUrl+"/"} component={InputPage} />
+		</div>
+	</BrowserRouter>
 )
